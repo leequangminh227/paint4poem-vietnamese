@@ -1,0 +1,32 @@
+CONFIG_NAME: 'eval_vietnamese'
+
+DATASET_NAME: 'vietnamese_poem'
+DATA_DIR: '../data/vietnamese_poems'
+GPU_ID: 0
+WORKERS: 1
+
+TREE:
+    BRANCH_NUM: 3
+
+TRAIN:
+    FLAG: False
+    # Cập nhật đường dẫn này sau khi train xong
+    NET_G: '../output/vietnamese_attn_*/Model/netG_epoch_*.pth'
+    NET_E: '../output/vietnamese_poem_DAMSM_*/Model/text_encoder*.pth'
+    BATCH_SIZE: 1
+
+# Set to True để generate cho toàn bộ test set
+# Set to False để generate từ example_filenames.txt
+B_VALIDATION: False
+
+GAN:
+    DF_DIM: 64
+    GF_DIM: 32
+    Z_DIM: 100
+    R_NUM: 2
+
+TEXT:
+    EMBEDDING_DIM: 256
+    CAPTIONS_PER_IMAGE: 1
+    WORDS_NUM: 64
+
