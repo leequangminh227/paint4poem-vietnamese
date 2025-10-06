@@ -35,6 +35,9 @@ models/
 *.log
 logs/
 
+# Test results
+test_results/
+
 # OS
 .DS_Store
 Thumbs.db
